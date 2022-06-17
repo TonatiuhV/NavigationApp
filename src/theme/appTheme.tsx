@@ -5,6 +5,18 @@ export const styles = StyleSheet.create({
         marginHorizontal:20
     },
     title: {
-        fontSize: 20
-    }
+        fontSize: 20,
+    },
+    botonGrande: {
+        flex:1,
+        width:100,
+        borderRadius:10,
+        justifyContent:'center',
+        alignItems: 'center',
+    },
+    textBotonGrande: {
+        color:'white',
+        fontSize:18,
+        fontWeight:'bold',
+    },
 })
