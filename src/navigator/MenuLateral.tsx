@@ -7,6 +7,8 @@ import { styles } from '../theme/appTheme';
 
 const Drawer = createDrawerNavigator();
 
+
+
 export const MenuLateral = () => {
   const { width }= useWindowDimensions()
   return (

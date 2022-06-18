@@ -34,6 +34,7 @@ export const Pagina1Screen = ({navigation}:Props) => {
         <Text>Navegar con argumentos</Text>
         <View style={{flexDirection: 'row', 
         height:100,
+        marginTop:10,
         justifyContent:'space-around'}}>
           <TouchableOpacity
             style={[styles.botonGrande, {backgroundColor: '#5856D6'}]}
