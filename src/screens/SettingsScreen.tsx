@@ -1,7 +1,16 @@
-import React from 'react'
+import { DrawerScreenProps } from '@react-navigation/drawer'
+import React, { useEffect } from 'react'
 import { Text, View } from 'react-native'
 
-export const SettingsScreen = () => {
+interface Props extends DrawerScreenProps<any,any>{};
+
+export const SettingsScreen = ({navigation}: Props) => {
+  // useEffect(() => {
+  //   navigation.setOptions({
+  //     headerShown:true
+  //   })
+  // }, [])
+  
   return (
     <View>
         <Text>
