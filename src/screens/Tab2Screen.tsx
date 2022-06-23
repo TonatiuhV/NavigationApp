@@ -9,7 +9,7 @@ export const Tab2Screen = () => {
   return (
     <View>
         <Text>
-            Tab1Screen
+            Tab2 Screen
         </Text>
     </View>
   )
