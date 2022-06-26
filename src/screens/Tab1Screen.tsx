@@ -17,14 +17,14 @@ export const Tab1Screen = () => {
         <Text style={styles.title}>Icons</Text>
         <Text>
 
-          <Icon name="airplane-outline" size={40} color={colores.primary} />
-          <Icon name="search-circle-outline" size={40} color={colores.primary} />
-          <Icon name="add-circle-outline" size={40} color={colores.primary} />
-          <Icon name="bookmark-outline" size={40} color={colores.primary} />
-          <Icon name="stats-chart-outline" size={40} color={colores.primary} />
-          <Icon name="barbell-outline" size={40} color={colores.primary} />
-          <Icon name="beer-outline" size={40} color={colores.primary} />
-          <Icon name="browsers-outline" size={40} color={colores.primary} />
+          <Icon name="airplane-outline" size={80} color={colores.primary} />
+          <Icon name="search-circle-outline" size={80} color={colores.primary} />
+          <Icon name="add-circle-outline" size={80} color={colores.primary} />
+          <Icon name="bookmark-outline" size={80} color={colores.primary} />
+          <Icon name="stats-chart-outline" size={80} color={colores.primary} />
+          <Icon name="barbell-outline" size={80} color={colores.primary} />
+          <Icon name="beer-outline" size={80} color={colores.primary} />
+          <Icon name="browsers-outline" size={80} color={colores.primary} />
         </Text>
     </View>
   )

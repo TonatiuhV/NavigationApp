@@ -15,12 +15,14 @@ export const Pagina1Screen = ({navigation}:Props) => {
     navigation.setOptions({
       headerLeft:  () =>{
         
-        return (<TouchableOpacity
+        return (
+        <TouchableOpacity
           style={{marginHorizontal:10}}
           onPress={() => navigation.toggleDrawer()}
         >
           <Icon name='menu-outline' size={35}/>
-        </TouchableOpacity>)
+        </TouchableOpacity>
+        )
       }
     })
     
@@ -47,7 +49,7 @@ export const Pagina1Screen = ({navigation}:Props) => {
               nombre: 'Pedro'
             })}
           >
-            <Icon name='man-outline' size={40} color="5856D6"/>
+            <Icon name='man-outline' size={40} color="white"/>
             <Text style={[styles.textBotonGrande]}>
               Pedro
             </Text>
@@ -60,7 +62,7 @@ export const Pagina1Screen = ({navigation}:Props) => {
             })}
           >
 
-<Icon name='woman-outline' size={40} color="5856D6"/>
+            <Icon name='woman-outline' size={40} color="white"/>
             <Text style={[styles.textBotonGrande]}>
               Maria
             </Text>
