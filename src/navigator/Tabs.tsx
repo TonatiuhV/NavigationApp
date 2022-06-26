@@ -8,6 +8,7 @@ import { StackNavigator } from './StackNavigator';
 import { colores, styles } from '../theme/appTheme';
 import { Platform, Text } from 'react-native';
 import { TopTabNavigator } from './TopTabNavigator';
+import Icon  from 'react-native-vector-icons/Ionicons';
 
 
 export const Tabs = () =>{
@@ -35,25 +36,27 @@ function TabsAndroid() {
                     
           tabBarIcon: ({color, focused}) => {
             
-            let iconName:String = '';
+            let iconName:string = '';
             switch(route.name){
               case 'Tab1Screen':
-                iconName= 'T1'
+                iconName= 'help-buoy-outline'
                 break;
               case 'TopTabNavigator':
-                iconName= 'TopTab'
+                iconName= 'map-outline'
                 break;
               case 'StackNavigator':
-                iconName= 'SN'
+                iconName= 'bookmarks-outline'
                 break;
             }
-            return <Text style={{color}}>{iconName}</Text>
+  
+  
+            return <Icon name={iconName} size={25} color={color}/>
           }  
         })}
       >
       <BottomTabAndroid.Screen name="Tab1Screen" options={{tabBarLabel: 'Tab1' }} component={Tab1Screen} />
       <BottomTabAndroid.Screen name="TopTabNavigator" options={{tabBarLabel: 'TopTab'}} component={TopTabNavigator} />
-      <BottomTabAndroid.Screen name="StackNavigator" options={{tabBarLabel: 'Tab3'}} component={StackNavigator} />
+      <BottomTabAndroid.Screen name="StackNavigator" options={{tabBarLabel: 'Stck'}} component={StackNavigator} />
     </BottomTabAndroid.Navigator>
   );
 }
@@ -76,21 +79,23 @@ const TabsIOS =() => {
         },
         tabBarIcon: ({color, focused, size}) => {
           
-          let iconName:String = '';
+          let iconName:string = '';
           switch(route.name){
             case 'Tab1Screen':
-              iconName= 'T1'
+              iconName= 'help-buoy-outline'
               break;
             case 'Tab2Screen':
-              iconName= 'T2'
+              iconName= 'map-outline'
               break;
             case 'StackNavigator':
-              iconName= 'SN'
+              iconName= 'people-outline'
               break;
           }
 
 
-          return <Text style={{color}}>{iconName}</Text>
+          return <Text style={{color}}>
+            <Icon name={iconName} size={35} color={color}/>
+            </Text>
         }
 
       })}
