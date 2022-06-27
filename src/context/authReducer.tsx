@@ -1,8 +1,9 @@
-import { AuthState } from "./AuthContext";
+import { authInitialState, AuthState } from "./AuthContext";
 
 
 type AuthAction = 
     | {type: 'signIn'}
+    | {type: 'logout'}
     | {type: 'changeFavIcon', payload: string}
 
 // Genera estado
@@ -20,6 +21,8 @@ export const authReducer = (state:AuthState, action:AuthAction):AuthState =>{
                 ...state,
                 favoriteIcon:action.payload
             }
+        case "logout":
+            return authInitialState
     
         default:// Simpre el defaul devueve e mismo state
             return state
