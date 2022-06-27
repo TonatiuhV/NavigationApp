@@ -4,17 +4,20 @@ import { AuthContext } from '../context/AuthContext'
 import { styles } from '../theme/appTheme'
 
 export const ContactsScreen = () => {
-  const { signIn } = useContext(AuthContext)
-
+  const { signIn, authState:{isLoggedIn} } = useContext(AuthContext)
+  
   return (
     <View style={styles.globaMargin}>
         <Text style={styles.title}>
           ContactsScreen
         </Text>
-        <Button
+        {
+        !isLoggedIn && <Button
           title="SignIn"
           onPress={signIn}
-        />
+        />}
+        
+        
     </View>
   )
 }
