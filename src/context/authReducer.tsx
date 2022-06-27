@@ -5,6 +5,8 @@ type AuthAction =
     | {type: 'signIn'}
     | {type: 'logout'}
     | {type: 'changeFavIcon', payload: string}
+    | {type: 'changeUserName', payload: string}
+
 
 // Genera estado
 export const authReducer = (state:AuthState, action:AuthAction):AuthState =>{
@@ -16,14 +18,18 @@ export const authReducer = (state:AuthState, action:AuthAction):AuthState =>{
                 isLoggedIn:true,
                 username: 'no-username'
             }
+        case "logout":
+            return authInitialState    
         case 'changeFavIcon':
             return {
                 ...state,
                 favoriteIcon:action.payload
             }
-        case "logout":
-            return authInitialState
-    
+        case 'changeUserName': 
+            return {
+                ...state,
+                username: action.payload
+            }
         default:// Simpre el defaul devueve e mismo state
             return state
     }
