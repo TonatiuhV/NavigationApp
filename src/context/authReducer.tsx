@@ -1,7 +1,9 @@
 import { AuthState } from "./AuthContext";
 
 
-type AuthAction = {type: 'signIn'}
+type AuthAction = 
+    | {type: 'signIn'}
+    | {type: 'changeFavIcon', payload: string}
 
 // Genera estado
 export const authReducer = (state:AuthState, action:AuthAction):AuthState =>{
@@ -12,6 +14,11 @@ export const authReducer = (state:AuthState, action:AuthAction):AuthState =>{
                 ...state,
                 isLoggedIn:true,
                 username: 'no-username'
+            }
+        case 'changeFavIcon':
+            return {
+                ...state,
+                favoriteIcon:action.payload
             }
     
         default:// Simpre el defaul devueve e mismo state

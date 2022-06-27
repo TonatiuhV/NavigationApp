@@ -2,8 +2,9 @@ import { DrawerScreenProps } from '@react-navigation/drawer'
 import React, { useContext, useEffect } from 'react'
 import { Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import Icon from 'react-native-vector-icons/Ionicons'
 import { AuthContext } from '../context/AuthContext'
-import { styles } from '../theme/appTheme'
+import { colores, styles } from '../theme/appTheme'
 
 interface Props extends DrawerScreenProps<any,any>{};
 
@@ -28,6 +29,16 @@ export const SettingsScreen = ({navigation}: Props) => {
         <Text>
           {JSON.stringify(authState, null,4)}
         </Text>
+        {
+          authState.favoriteIcon && (
+          <Icon
+          
+            name={authState.favoriteIcon}
+            size={150}
+            color={colores.primary}
+          />
+          )
+        }
     </View>
   )
 }
