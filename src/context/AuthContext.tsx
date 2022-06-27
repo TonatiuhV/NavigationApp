@@ -29,11 +29,16 @@ export const AuthContext = createContext({} as AuthContextProps)
 export const AuthProvider  = ({children}:any) =>{
     // retorna un nuevo estado y tiene un inicializacion
     const [authState, dispatch] = useReducer(authReducer, authInitialState)
+    
+    const signIn = () =>{
+        dispatch({ type: 'signIn'})
+    }
+    
     return (
         <AuthContext.Provider
             value={{
                 authState,
-                signIn: ()=> {},
+                signIn,
             }}
         >
             {children}
