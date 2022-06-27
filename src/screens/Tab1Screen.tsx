@@ -4,6 +4,7 @@ import { colores, styles } from '../theme/appTheme';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { TouchableIcon } from '../components/TouchableIcon';
 
 
 export const Tab1Screen = () => {
@@ -17,14 +18,14 @@ export const Tab1Screen = () => {
         <Text style={styles.title}>Icons</Text>
         <Text>
 
-          <Icon name="airplane-outline" size={80} color={colores.primary} />
-          <Icon name="search-circle-outline" size={80} color={colores.primary} />
-          <Icon name="add-circle-outline" size={80} color={colores.primary} />
-          <Icon name="bookmark-outline" size={80} color={colores.primary} />
-          <Icon name="stats-chart-outline" size={80} color={colores.primary} />
-          <Icon name="barbell-outline" size={80} color={colores.primary} />
-          <Icon name="beer-outline" size={80} color={colores.primary} />
-          <Icon name="browsers-outline" size={80} color={colores.primary} />
+          <TouchableIcon iconName="airplane-outline"/>
+          <TouchableIcon iconName="search-circle-outline"/>
+          <TouchableIcon iconName="add-circle-outline"/>
+          <TouchableIcon iconName="bookmark-outline"/>
+          <TouchableIcon iconName="stats-chart-outline"/>
+          <TouchableIcon iconName="barbell-outline"/>
+          <TouchableIcon iconName="beer-outline"/>
+          <TouchableIcon iconName="browsers-outline"/>
         </Text>
     </View>
   )
